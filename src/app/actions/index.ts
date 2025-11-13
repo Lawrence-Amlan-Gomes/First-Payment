@@ -11,7 +11,6 @@ import { generateToken } from "@/lib/server/jwt";
 import { signOut } from "@/app/auth";
 import { CleanUser } from "@/store/features/auth/authSlice";
 import { verifyToken } from "@/lib/server/jwt";
-import { CleanUser } from "@/store/features/auth/authSlice";
 
 // ==================== AUTH ACTIONS ====================
 
