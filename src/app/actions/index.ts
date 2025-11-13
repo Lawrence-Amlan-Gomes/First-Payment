@@ -37,6 +37,7 @@ export async function performLogin({
     firstTimeLogin: user.firstTimeLogin || false,
     isAdmin: user.isAdmin || false,
     createdAt: user.createdAt?.toISOString() || new Date().toISOString(),
+    paymentType: user.paymentType || "Free",
   };
 
   const token = await generateToken(cleanUser);
@@ -75,6 +76,12 @@ export async function changePhoto(email: string, photo: string) {
   revalidatePath("/profile");
 }
 
+export async function updatePaymentType(email: string, paymentType: string) {
+  await dbConnect();
+  await User.updateOne({ email }, { paymentType });
+  revalidatePath("/");
+}
+
 export async function updateUser(
   email: string,
   updates: {
@@ -100,6 +107,7 @@ export async function findUserByEmail(email: string) {
     firstTimeLogin: user.firstTimeLogin || false,
     isAdmin: user.isAdmin || false,
     createdAt: user.createdAt?.toISOString() || new Date().toISOString(),
+    paymentType: user.paymentType
   };
 }
 

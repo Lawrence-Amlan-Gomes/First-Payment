@@ -9,6 +9,7 @@ export interface CleanUser {
   firstTimeLogin: boolean;
   isAdmin: boolean;
   createdAt: string;
+  paymentType: string;
 }
 
 export interface CleanGoogleUser {

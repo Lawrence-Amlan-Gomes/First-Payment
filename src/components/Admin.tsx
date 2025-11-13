@@ -3,7 +3,7 @@ import { useTheme } from "@/app/hooks/useTheme";
 import colors from "@/app/color/color";
 import { useAuth } from "@/app/hooks/useAuth";
 
-export default function LandingPage() {
+export default function Admin() {
   const { theme } = useTheme();
   const { user: auth } = useAuth();
   return (
@@ -13,8 +13,7 @@ export default function LandingPage() {
       }`}
     >
       {" "}
-      <div>{auth ? `Hello ${auth.name}` : ""} </div>
-      Authentication and Payment format
+      <div>{auth ? `Welcome, dear admin ${auth.name}` : ""} </div>
     </div>
   );
 }

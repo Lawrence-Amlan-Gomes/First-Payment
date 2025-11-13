@@ -21,6 +21,7 @@ const UserSchema = new mongoose.Schema<IUser>(
     firstTimeLogin: { type: Boolean, default: true },
     createdAt: { type: Date, default: Date.now },
     isAdmin: { type: Boolean, default: false },
+    paymentType: {type: String, default: "Free"}
   },
   {
     versionKey: false,

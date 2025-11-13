@@ -17,6 +17,7 @@ export async function generateToken(user: CleanUser): Promise<string> {
     firstTimeLogin: user.firstTimeLogin,
     isAdmin: user.isAdmin,
     createdAt: user.createdAt,
+    paymentType: user.paymentType,
   })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()

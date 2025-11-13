@@ -2,11 +2,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./features/auth/authSlice";
 import themeReducer from "./features/theme/themeSlice";
+import priceReducer from "./features/price/priceSlice"
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
     theme: themeReducer,
+    price: priceReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

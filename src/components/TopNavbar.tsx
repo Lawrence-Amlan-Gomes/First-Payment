@@ -37,7 +37,7 @@ const NavItem = ({ href, label, active, onClick, theme }) => (
 
 const TopNavbar = () => {
   const { theme } = useTheme();
-  const { auth } = useAuth();
+  const { user: auth } = useAuth();
   const [active, setActive] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -46,6 +46,7 @@ const TopNavbar = () => {
   // Define base navItems
   const baseNavItems = [
     { href: '/home', label: 'Home', activeKey: 'home' },
+    { href: '/pricing', label: 'Pricing', activeKey: 'pricing' },
   ];
 
   // Conditionally add Admin route if user is admin

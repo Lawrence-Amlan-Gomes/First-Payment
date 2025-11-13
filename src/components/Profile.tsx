@@ -81,7 +81,9 @@ const Profile = () => {
               <div className="w-full sm:mt-5 sm:mb-5 my-2 text-[12px] sm:text-[20px] flex items-center justify-center">
                 {auth.email}
               </div>
-
+              <div className="w-full sm:mt-5 sm:mb-5 my-2 text-[12px] sm:text-[20px] flex items-center justify-center">
+                {auth.paymentType}
+              </div>
               <div className="w-full mt-5 mb-5 flex text-[12px] sm:text-[18px] items-center justify-center">
                 <button
                   onClick={toggleEdit}
@@ -152,6 +154,9 @@ const Profile = () => {
                 </div>
                 <div className="w-full mt-5 mb-5 flex items-center justify-center">
                   {auth.email}
+                </div>
+                <div className="w-full mt-5 mb-5 flex items-center justify-center">
+                  {auth.paymentType}
                 </div>
               </div>
             ) : (

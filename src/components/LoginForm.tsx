@@ -104,6 +104,7 @@ const LoginForm = () => {
       const user = await findUserByEmail(userEmail);
 
       if (user) {
+        console.log(user)
         if (user.firstTimeLogin && session.user.image) {
           user.photo = session.user.image;
           await changePhoto(userEmail, session.user.image);
